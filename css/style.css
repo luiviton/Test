@@ -1,0 +1,185 @@
+html {
+	font-family: roboto, Arial, sans-serif;
+}
+body {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*.......................header........................*/
+.header-center {
+	width: 100%;
+	background: #696969;
+}
+
+.nav-up {
+	max-width: 1360px;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+}
+
+.nav-up__navigation {
+	display: flex;
+	width: 460px;
+	justify-content: space-between;
+}
+
+.nav-up__element {
+	padding: 15px 10px;
+}
+
+.nav-up__link {
+	color: #c2c2c2;
+	font-weight: bold;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+.nav-up__link:hover {
+	color: #fff;
+}
+
+.nav-up__link:active {
+	color: #8a8a8a;
+}
+
+.nav-up__link__is-active {
+	color: #fff;
+	border-bottom: 2px solid #ffc925;
+	padding-bottom: 14px;
+}
+
+.nav-down__icons {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.nav-up__botton {
+	width: 125px;
+	height: 100%;
+	background: #ff8900;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.nav-up__botton__link {
+	color: #fff;
+	font-size: 12px;
+	margin-left: 20px;
+	font-family: myriadpro, Arial, sans-serif;
+}
+
+.nav-up__botton__link:after {
+	content: "";
+	background-image: url(../image/header/Vector-Smart-Object.png);
+	position: absolute;
+	background-repeat: no-repeat;
+	width: 17px;
+	height: 15px;
+	top: 17px;
+	left: 30px;
+}
+
+.header-center__transparent {
+	width: 100%;
+}
+
+.nav-down__logo img {
+	margin-top: 10px;
+}
+
+.nav-down {
+	max-width: 1360px;
+	display: flex;
+	justify-content: space-between;
+	margin: 40px auto 0 auto;
+}
+
+.nav-down__telephon {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #f5f5f5;
+}
+
+.nav-down__telephon__number {
+	color: #151515;
+	font-size: 16px;
+	margin-right: 10px;
+	font-style: italic;
+	padding: 15px 0 15px 5px;
+}
+
+.call-back {
+	font-family: myriadpro, Arial, sans-serif;
+	font-size: 12px;
+	background: #ff8900;
+	color: #fff;
+	width: 200px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.call-back:after {
+	content: "";
+	background-image: url(../image/header/telephon.png);
+	position: absolute;
+	background-repeat: no-repeat;
+	width: 12px;
+	height: 17px;
+	top: 17px;
+	left: 30px;
+}
+
+.nav-down__icons {
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav-down__icons__basket {
+	margin-right: 35px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.nav-down__icons__favorites,
+.nav-down__icons__libra {
+	margin-right: 75px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.nav-down__icons p {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 10px;
+}
+
+.nav-down__icons__basket:after {
+	content: "";
+	background-image: url(../image/header/digits-bg.png);
+	position: absolute;
+	background-repeat: no-repeat;
+	width: 35px;
+	height: 35px;
+	top: -25px;
+	left: 10px;
+}
+
+
+
+
+
