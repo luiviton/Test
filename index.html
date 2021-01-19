@@ -11,60 +11,120 @@
 	<header>
 		<div class="header-center">
 			<div class="nav-up">
-			<div class="nav-up__navigation">
-				<div class="nav-up__element"><a href="#" class="nav-up__link">ГЛАВНАЯ</a></div>
-				<div class="nav-up__element"><a href="#" class="nav-up__link nav-up__link__is-active">О КОМПАНИИ</a></div>
-				<div class="nav-up__element"><a href="#" class="nav-up__link">ССЫЛКА 1</a></div>
-				<div class="nav-up__element"><a href="#" class="nav-up__link">ССЫЛКА 2</a></div>
-				<div class="nav-up__element"><a href="#" class="nav-up__link">ССЫЛКА 3</a></div>
-			</div>
-			<a href="#">
-				<div class="nav-up__botton">
-					 <div class="nav-up__botton__link">ВХОД</div> 
+				<div class="nav-up__navigation">
+					<div class="nav-up__element"><a href="#" class="nav-up__link">ГЛАВНАЯ</a></div>
+					<div class="nav-up__element"><a href="#" class="nav-up__link nav-up__link__is-active">О КОМПАНИИ</a></div>
+					<div class="nav-up__element"><a href="#" class="nav-up__link">ССЫЛКА 1</a></div>
+					<div class="nav-up__element"><a href="#" class="nav-up__link">ССЫЛКА 2</a></div>
+					<div class="nav-up__element"><a href="#" class="nav-up__link">ССЫЛКА 3</a></div>
 				</div>
-			</a>
-		</div>
+
+
+				<a href="#" id="entrance-popup">
+					<div class="nav-up__botton">
+						 <div class="nav-up__botton__link">ВХОД</div> 
+					</div>
+				</a>
+
+				<div id="my-entrance-popup" class="entrance-popup__wraper">
+					<div class="entrance-popup__content">
+						<div class="close-entrance-popup"></div>
+						<div class="entrance-popup__content__block">
+							
+							<form class="form-login" method="post" id="loginform">
+								<div class="entry-login">
+									<h2>Вход в личный кабинет</h2>
+									<p>Ваш email</p>
+									<input class="entry-mail" id="mail" type="text" name="mail" placeholder="  mikel_ivanov98@gmail.com">
+									<br><div id="valid"></div>
+
+									<p id="password-paragraph">Пароль</p>
+									<input type="password" id="pass1" class="entry-pasword" name="password" placeholder="   ***********">
+									<div id="error-pass"></div>
+
+									<br>
+									<p id="checkbox-paragraph">
+										<input type="checkbox"  name="remember-me">
+										Запомнить меня
+									</p>
+									<a href="#">Забыли пароль?</a>
+									<a href="#">Регистрация</a><br>
+									<button type="submit"  id="submit-popup" class="entry-button">Войти в личный кабинет</button>
+								</div>
+								<div class="login-with">
+									<h2>Войти с помощью</h2>
+									<a href="#">
+										<div class="link-facebook">Facebook</div>
+									</a>
+									<a href="#">
+										<div class="link-twitter">Twitter</div>
+									</a>
+									<a href="#">
+										<div class="link-google">Google</div>
+									</a>
+								</div>
+							</form>
+							
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="header-center__transparent">
 			<div class="nav-down">
-			<div class="nav-down__logo">
-				<img src="image/header/Test-logo.png" alt="TEST logo">
-			</div>
-			<div class="nav-down__telephon">
-				<a href="tel:+3809817000740">
-					<div  class="nav-down__telephon__number">+380 98 170 00 740 </div>
-				</a>	
-				<a href="tel:+3809817000740">
-					<div  class="nav-down__telephon__number">+380 98 170 00 740 </div>
-				</a>
-				<a href="tel:+3809817000740">
-					<div class="call-back">
-						ПЕРЕЗВОНИТЬ МНЕ
-					</div>
-				</a>
-			</div>
-			<div class="nav-down__icons">
-				<a href="#">
-					<div class="nav-down__icons__libra">
-					<img src="image/header/libra.png" alt="libra">
-					<p>СРАВНЕНИЕ</p>
+				<div class="nav-down__logo">
+					<img src="image/header/Test-logo.png" alt="TEST logo">
 				</div>
-				</a>
-				<a href="#">
-					<div class="nav-down__icons__favorites">
-					<img src="image/header/favorites.png" alt="telephon">
-					<p>ИЗБРАНОЕ</p>
-				</div>
-				</a>
-				<a href="#">
-					<div class="nav-down__icons__basket">
-						<img src="image/header/basket.png" alt="basket">
-						<p>КОРЗИНА</p>
+				<div class="nav-down__telephon">
+					<div  class="nav-down__telephon__number">+380 98 170 00 740 </div>	
+					<div  class="nav-down__telephon__number">+380 98 170 00 740 </div>
+
+					<a href="#" id="call-popup">
+						<div class="call-back">
+							ПЕРЕЗВОНИТЬ МНЕ
+						</div>
+					</a>
+					<div id="my-call-popup" class="call-popup__wraper">
+						<div class="call-popup__content">
+							<div class="close-call-popup"></div>
+							<div class="call-popup__content__block">
+								<h2>Перезвоните мне</h2>
+								<p>Номер телефона</p>
+								<form class="form-call">
+									<input type="text" id="popup-phone" name="telephon" class="call-popup__input" placeholder="+38(0__)___-__-__">
+									<button class="call-popup__button" type="submit">Перезвоните мне</button>
+								</form>
+							</div>
+						</div>
 					</div>
-				</a>
+				</div>
+				<div class="nav-down__icons">
+					<a href="#">
+						<div class="nav-down__icons__libra">
+						<img src="image/header/libra.png" alt="libra">
+						<p>СРАВНЕНИЕ</p>
+					</div>
+					</a>
+					<a href="#">
+						<div class="nav-down__icons__favorites">
+						<img src="image/header/favorites.png" alt="telephon">
+						<p>ИЗБРАНОЕ</p>
+					</div>
+					</a>
+					<a href="#">
+						<div class="nav-down__icons__basket">
+							<div class="basket-number">5</div>
+							<img src="image/header/basket.png" alt="basket">
+							<p>КОРЗИНА</p>
+						</div>
+					</a>
+				</div>
 			</div>
-		</div>
 		</div>
 	</header>
+ 	<script src="js/jquery-3.4.1.min.js"></script> 
+ 	<script src="js/jquery.maskedinput.js"></script>
+ 	<script src="js/jquery.validate.js"></script>
+	<script src="js/javascript.js"></script>
 </body>
 </html>
