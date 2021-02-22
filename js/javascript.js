@@ -90,4 +90,140 @@ $(document).ready(function(){
 
 }); 
 
+$(function(){
+    let menuElem = document.getElementById('onclickmenu');
+    let titleElem = menuElem.querySelector('.top-menu__head__button');
 
+    titleElem.onclick = function() {
+      menuElem.classList.toggle('open');
+    };
+});
+
+
+
+
+
+
+
+$('.input-search__select').each(function() {
+    const _this = $(this),
+        selectOption = _this.find('option'),
+        selectOptionLength = selectOption.length,
+        selectedOption = selectOption.filter(':selected'),
+        duration = 350; // длительность анимации 
+
+    _this.hide();
+    _this.wrap('<div class="input-search__select"></div>');
+    $('<div>', {
+        class: 'new-select',
+        text: _this.children('option:disabled').text()
+    }).insertAfter(_this);
+
+    const selectHead = _this.next('.new-select');
+    $('<div>', {
+        class: 'new-select__list'
+    }).insertAfter(selectHead);
+
+    const selectList = selectHead.next('.new-select__list');
+    for (let i = 1; i < selectOptionLength; i++) {
+        $('<div>', {
+            class: 'new-select__item',
+            html: $('<span>', {
+                text: selectOption.eq(i).text()
+            })
+        })
+        .attr('data-value', selectOption.eq(i).val())
+        .appendTo(selectList);
+    }
+
+    const selectItem = selectList.find('.new-select__item');
+    selectList.slideUp(0);
+    selectHead.on('click', function() {
+        if ( !$(this).hasClass('on') ) {
+            $(this).addClass('on');
+            selectList.slideDown(duration);
+
+            selectItem.on('click', function() {
+                let chooseItem = $(this).data('value');
+
+                $('input-search__select').val(chooseItem).attr('selected', 'selected');
+                selectHead.text( $(this).find('span').text() );
+
+                selectList.slideUp(duration);
+                selectHead.removeClass('on');
+            });
+
+        } else {
+            $(this).removeClass('on');
+            selectList.slideUp(duration);
+        }
+    });
+});
+
+// tabs
+$(function(){
+
+	const tabBtn  = document.querySelectorAll('.tabs__nav-btn')
+	const tabItem = document.querySelectorAll('.tabs__item')
+
+	tabBtn.forEach(onTabClick)
+
+	function onTabClick(item) {
+		item.addEventListener( 'click', function() {
+			let currentBtn = item
+			let tabId = currentBtn.getAttribute('data-tab')
+			let currentTab = document.querySelector(tabId)
+
+			if ( ! currentBtn.classList.contains('active') ) {
+				tabBtn.forEach(function(item) {
+				item.classList.remove('active')
+				})
+
+				tabItem.forEach(function(item) {
+					item.classList.remove('active')
+				})
+
+				currentBtn.classList.add('active')
+				currentTab.classList.add('active')
+			}
+		})
+	}
+
+	document.querySelector('.tabs__nav-btn').click()
+})
+
+// select
+
+function selectProg() {
+
+	let selectHeader = document.querySelectorAll('.tabs__select__header')
+	let selectItem = document.querySelectorAll('.select__item')
+	
+	selectHeader.forEach(item => {
+		item.addEventListener('click', selectToggle)
+	})
+
+	selectItem.forEach(item => {
+		item.addEventListener('click', selectChoose)
+	})
+	
+	function selectToggle() {
+		this.parentElement.classList.toggle('is-active')
+	}
+
+	function selectChoose() {
+		let text = this.innerText
+		let select = this.closest('.tabs__select')
+		let currentText = select.querySelector('.select__current')
+
+		currentText.innerText = text
+		select.classList.remove('is-active')
+
+	}
+
+	
+
+
+}
+
+selectProg()

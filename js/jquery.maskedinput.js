@@ -1,9 +1,4 @@
-/*
-	Masked Input plugin for jQuery
-	Copyright (c) 2007-2013 Josh Bush (digitalbush.com)
-	Licensed under the MIT license (http://digitalbush.com/projects/masked-input-plugin/#license)
-	Version: 1.3.1
-*/
+
 (function($) {
 	function getPasteEvent() {
     var el = document.createElement('input'),
@@ -19,7 +14,7 @@ var pasteEventName = getPasteEvent() + ".mask",
 	caretTimeoutId;
 
 $.mask = {
-	//Predefined character definitions
+
 	definitions: {
 		'9': "[0-9]",
 		'a': "[A-Za-z]",
@@ -30,7 +25,7 @@ $.mask = {
 };
 
 $.fn.extend({
-	//Helper Function for Caret positioning
+
 	caret: function(begin, end) {
 		var range;
 
